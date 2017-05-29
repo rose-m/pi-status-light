@@ -4,11 +4,11 @@ from time import sleep
 from rating_light import RatingLightInfo
 from utils import import_sense_hat
 
-green_inactive = (0, 150, 0)
+green_inactive = (0, 50, 0)
 green_active = (0, 255, 0)
-yellow_inactive = (150, 150, 0)
+yellow_inactive = (50, 50, 0)
 yellow_active = (255, 255, 0)
-red_inactive = (150, 0, 0)
+red_inactive = (50, 0, 0)
 red_active = (255, 0, 0)
 
 
@@ -19,7 +19,7 @@ class HatHandler:
         atexit.register(self.clear)
 
     def do_check(self):
-        self._sense.clear((0, 255, 0))
+        self._sense.clear((200, 0, 150))
         sleep(1)
         self.clear()
 
@@ -48,7 +48,7 @@ class HatHandler:
 
         self._sense.show_message(
             rating.name,
-            scroll_speed=0.1
+            scroll_speed=0.05
         )
 
         o = (0, 0, 0)

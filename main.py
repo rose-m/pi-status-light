@@ -21,7 +21,7 @@ if __name__ == '__main__':
     light = RatingLightInfo(name='Test', value=RatingLightInfo.RATING_LIGHT_RED)
 
     auth = CplaceAuthenticator('g9denm1u0ur193kfad0kfwzyg')
-    collector = DataCollector('http://localhost:8083/intern/tricia/cf/cplace/fun/piStatus/handler/ratingLightStatus',
+    collector = DataCollector('http://192.168.178.20:8083/intern/tricia/cf/cplace/fun/piStatus/handler/ratingLightStatus',
                               authenticator=auth)
 
     collector.start()

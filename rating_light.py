@@ -1,8 +1,8 @@
 class RatingLightInfo:
     RATING_LIGHT_UNKNOWN = None
-    RATING_LIGHT_RED = 'red'
-    RATING_LIGHT_YELLOW = 'yellow'
-    RATING_LIGHT_GREEN = 'green'
+    RATING_LIGHT_RED = 'RED'
+    RATING_LIGHT_YELLOW = 'YELLOW'
+    RATING_LIGHT_GREEN = 'GREEN'
 
     def __init__(self, name, value):
         self.name = name
