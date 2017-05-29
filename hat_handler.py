@@ -26,12 +26,14 @@ class HatHandler:
     def clear(self):
         self._sense.clear()
 
-    def show_rating_light(self, rating):
+    def show_rating_light(self, rating, pause_time=2.0):
         """
         Shows the given rating light by first displaying its name and then the lights.
 
-        :param rating:
+        :param rating: Rating to show
         :type rating: RatingLightInfo
+        :param pause_time: Time to show lights
+        :type pause_time: int
         :return:
         """
         r = red_inactive
@@ -60,3 +62,6 @@ class HatHandler:
             o, o, o, g, g, o, o, o,
             o, o, o, g, g, o, o, o
         ])
+
+        sleep(pause_time)
+        self.clear()
